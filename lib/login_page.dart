@@ -1,3 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:farmarketplace/background.dart';
 import 'package:farmarketplace/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -8,41 +11,35 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const Icon(
-              Icons.account_box,
-              size: 100,
-            ),
-            const CustomInput(
-              msgHint: 'Usuario',
-              isObscure: false,
-            ),
-            const CustomInput(
-              msgHint: 'Contraseña',
-              isObscure: true,
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute<void>(
-                  builder: (BuildContext context) => const HomePage(),
+        //backgroundColor: Theme.of(context).backgroundColor,
+        body: Background(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Icon(Icons.account_box, size: 100, color: Color(0xff66c7d3)),
+                SizedBox(
+                  height: 120,
                 ),
-              ),
-              child: const Text(
-                'Login',
-                style: TextStyle(
-                  color: Colors.white,
+                CustomInput(
+                  msgHint: 'Usuario',
+                  isObscure: false,
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: const Color(0xff272d63),
-              ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomInput(
+                  msgHint: 'Contraseña',
+                  isObscure: true,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                LoginButton()
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -90,6 +87,40 @@ class CustomInput extends StatelessWidget {
           ),
           hintText: msgHint,
           hintStyle: const TextStyle(color: Colors.black45),
+        ),
+      ),
+    );
+  }
+}
+
+class LoginButton extends StatelessWidget {
+  const LoginButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      alignment: Alignment.bottomRight,
+      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+      child: RaisedButton(
+        onPressed: () => {},
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
+        textColor: Colors.white,
+        padding: const EdgeInsets.all(0),
+        child: Container(
+          alignment: Alignment.center,
+          height: 50.0,
+          width: size.width * 0.5,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(80.0),
+          ),
+          padding: const EdgeInsets.all(0),
+          child: const Text(
+            "LOGIN",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     );
