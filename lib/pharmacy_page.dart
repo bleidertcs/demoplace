@@ -7,15 +7,47 @@ class PharmacyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Farmacia'),
+        title: const Text(
+          'Farmacia',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            color: Colors.lightBlue,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 20),
+                child: const Text(
+                  'Productos Elegidos:',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
           ),
+          const SizedBox(height: 10),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Text('Producto'),
+              SizedBox(width: 10),
+              Text('Precio'),
+              SizedBox(width: 10),
+              Text('Cantidad'),
+              SizedBox(width: 10),
+              Text('Monto'),
+            ],
+          )
         ],
       ),
     );

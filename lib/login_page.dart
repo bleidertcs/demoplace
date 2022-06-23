@@ -3,40 +3,47 @@
 import 'package:farmarketplace/background.dart';
 import 'package:farmarketplace/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        //backgroundColor: Theme.of(context).backgroundColor,
-        body: Background(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
+    return Scaffold(
+      body: Background(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
+          child: Flexible(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Icon(Icons.account_box, size: 100, color: Color(0xff66c7d3)),
-                SizedBox(
-                  height: 120,
+              children: [
+                const Icon(
+                  Icons.account_box,
+                  size: 100,
+                  color: Color(0xff66c7d3),
                 ),
-                CustomInput(
+                const SizedBox(height: 120),
+                const CustomInput(
                   msgHint: 'Usuario',
                   isObscure: false,
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                CustomInput(
+                const SizedBox(height: 20),
+                const CustomInput(
                   msgHint: 'Contraseña',
                   isObscure: true,
                 ),
-                SizedBox(
-                  height: 20,
+                const SizedBox(height: 20),
+                const LoginButton(),
+                const SizedBox(height: 20),
+                IconButton(
+                  onPressed: () {},
+                  iconSize: 60,
+                  icon: const Icon(
+                    Icons.fingerprint,
+                    size: 60,
+                  ),
                 ),
-                LoginButton()
               ],
             ),
           ),
@@ -102,12 +109,19 @@ class LoginButton extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomRight,
       margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-      child: RaisedButton(
-        onPressed: () => {},
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
-        textColor: Colors.white,
-        padding: const EdgeInsets.all(0),
+      child: ElevatedButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute<void>(
+            builder: (BuildContext context) => const HomePage(),
+          ),
+        ),
+        style: ElevatedButton.styleFrom(
+          primary: const Color.fromARGB(255, 39, 45, 99),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
+          padding: const EdgeInsets.all(0),
+        ),
         child: Container(
           alignment: Alignment.center,
           height: 50.0,
@@ -119,7 +133,10 @@ class LoginButton extends StatelessWidget {
           child: const Text(
             "LOGIN",
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
