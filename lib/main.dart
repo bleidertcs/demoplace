@@ -1,3 +1,4 @@
+import 'package:farmarketplace/home_page.dart';
 import 'package:flutter/material.dart';
 
 import 'login_page.dart';
@@ -222,7 +223,7 @@ class MyApp extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(0.0)),
         )),
       ),
-      home: const LoginPage(),
+      home: const HomePage(),
     );
   }
 }

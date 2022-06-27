@@ -1,3 +1,4 @@
+import 'package:farmarketplace/widgets/productCard.dart';
 import 'package:flutter/material.dart';
 
 class MedicalPage extends StatelessWidget {
@@ -12,10 +13,8 @@ class MedicalPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            color: Colors.blue,
-          ),
+        children: const [
+          ProductCard(),
         ],
       ),
     );
