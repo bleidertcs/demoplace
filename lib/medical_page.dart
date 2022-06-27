@@ -10,12 +10,17 @@ class MedicalPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Atencion Medica'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          ProductCard(),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            ProductCard(
+              image: 'assets/botella.jpg',
+              productName: 'Botella',
+              productPrice: 'Bs. 10.000',
+            ),
+          ],
+        ),
       ),
     );
   }
