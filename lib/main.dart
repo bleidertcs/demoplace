@@ -223,7 +223,7 @@ class MyApp extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(0.0)),
         )),
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

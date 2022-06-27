@@ -1,7 +1,8 @@
 import 'package:farmarketplace/aps_page.dart';
 import 'package:farmarketplace/laboratory_page.dart';
 import 'package:farmarketplace/medical_page.dart';
-import 'package:farmarketplace/pharmacy_page.dart';
+import 'package:farmarketplace/pharmacy_home_page.dart';
+import 'package:farmarketplace/qrcode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -88,14 +89,28 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+          const Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: Text(
+              'Generar Codigo QR',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
           Container(
-            margin: const EdgeInsets.only(top: 50),
+            padding: const EdgeInsets.only(bottom: 20),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => const QrCodePage(),
+                  ),
+                );
+              },
               iconSize: 80,
               icon: const Icon(
-                FontAwesomeIcons.qrcode,
-                size: 80,
+                Icons.qr_code_2,
+                size: 100,
               ),
             ),
           )

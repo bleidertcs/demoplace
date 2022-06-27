@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProductCard extends StatelessWidget {
   ProductCard({Key? key, this.image, this.productName, this.productPrice})
@@ -31,7 +32,7 @@ class ProductCard extends StatelessWidget {
               top: 15,
               right: 10,
               child: Icon(
-                Icons.heart_broken,
+                FontAwesomeIcons.heart,
                 color: Color(0xff51b9cb),
                 size: 30,
               )),

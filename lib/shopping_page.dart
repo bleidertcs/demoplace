@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PharmacyPage extends StatelessWidget {
-  const PharmacyPage({Key? key}) : super(key: key);
+class ShoppingPage extends StatelessWidget {
+  const ShoppingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Farmacia',
+          'Su carrito',
           style: TextStyle(
             color: Colors.white,
           ),
