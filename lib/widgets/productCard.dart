@@ -44,14 +44,6 @@ class ProductCard extends StatelessWidget {
           ),
           child: Stack(children: [
             const Positioned(
-                top: 15,
-                right: 10,
-                child: Icon(
-                  FontAwesomeIcons.heart,
-                  color: Color(0xff51b9cb),
-                  size: 30,
-                )),
-            const Positioned(
                 bottom: 20,
                 right: 10,
                 child: Icon(
@@ -64,27 +56,41 @@ class ProductCard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  ProductImage(),
+                children: [
+                  ProductImage(
+                    image: image,
+                  ),
                   ProductName(),
                   ProductPrice(),
                   ProductStars()
                 ],
               ),
             ),
+            const Positioned(
+                top: 15,
+                right: 10,
+                child: Icon(
+                  FontAwesomeIcons.heart,
+                  color: Color(0xff51b9cb),
+                  size: 30,
+                )),
           ])),
     );
   }
 }
 
 class ProductImage extends StatelessWidget {
-  const ProductImage({Key? key}) : super(key: key);
+  const ProductImage({
+    Key? key,
+    this.image,
+  }) : super(key: key);
+  final String? image;
 
   @override
   Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage('assets/botella.jpg'),
-      height: 140,
+    return Image(
+      image: AssetImage(image!),
+      height: 120,
     );
   }
 }
@@ -97,7 +103,7 @@ class ProductPrice extends StatelessWidget {
     return const Text(
       'Bs. 100.00',
       style: TextStyle(
-        fontSize: 17,
+        fontSize: 16,
         fontWeight: FontWeight.w700,
       ),
     );
@@ -112,7 +118,7 @@ class ProductName extends StatelessWidget {
     return const Text(
       'Shoes',
       style: TextStyle(
-          fontSize: 16,
+          fontSize: 15,
           fontWeight: FontWeight.w400,
           letterSpacing: 1.2,
           color: Colors.black38),
@@ -130,27 +136,27 @@ class ProductStars extends StatelessWidget {
         Icon(
           Icons.star,
           color: Colors.yellow,
-          size: 20,
+          size: 18,
         ),
         Icon(
           Icons.star,
           color: Colors.yellow,
-          size: 20,
+          size: 18,
         ),
         Icon(
           Icons.star,
           color: Colors.yellow,
-          size: 20,
+          size: 18,
         ),
         Icon(
           Icons.star,
           color: Colors.yellow,
-          size: 20,
+          size: 18,
         ),
         Icon(
           Icons.star,
           color: Colors.yellow,
-          size: 20,
+          size: 18,
         )
       ],
     );
