@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'physical_information_page.dart';
+
 class QrCodePage extends StatelessWidget {
   const QrCodePage({Key? key}) : super(key: key);
 
@@ -25,7 +27,15 @@ class QrCodePage extends StatelessWidget {
           ),
           Center(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const PhysicalInformationPage(),
+                  ),
+                );
+              },
               child: Image.asset(
                 'assets/codigo_qr.png',
                 height: 300,
