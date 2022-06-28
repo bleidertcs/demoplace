@@ -156,7 +156,30 @@ class PharmacyPage extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              ProductCard(
+                image: '',
+                productName: '',
+                productPrice: '',
+              ),
+              ProductCard(
+                image: '',
+                productName: '',
+                productPrice: '',
+              ),
+            ],
+          ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.shopping_cart,
+          color: Colors.white,
+        ),
       ),
     );
   }
