@@ -11,40 +11,35 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Background(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
-          child: Flexible(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.account_box,
-                  size: 100,
-                  color: Color(0xff66c7d3),
-                ),
-                const SizedBox(height: 120),
-                const CustomInput(
-                  msgHint: 'Usuario',
-                  isObscure: false,
-                ),
-                const SizedBox(height: 20),
-                const CustomInput(
-                  msgHint: 'Contraseña',
-                  isObscure: true,
-                ),
-                const SizedBox(height: 20),
-                const LoginButton(),
-                const SizedBox(height: 20),
-                IconButton(
-                  onPressed: () {},
-                  iconSize: 60,
-                  icon: const Icon(
-                    Icons.fingerprint,
-                    size: 60,
+      body: Form(
+        key: key,
+        child: Background(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
+            child: Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Icons.account_box,
+                    size: 100,
+                    color: Color(0xff66c7d3),
                   ),
-                ),
-              ],
+                  SizedBox(height: 120),
+                  CustomInput(
+                    msgHint: 'Usuario',
+                    isObscure: false,
+                  ),
+                  SizedBox(height: 20),
+                  CustomInput(
+                    msgHint: 'Contraseña',
+                    isObscure: true,
+                  ),
+                  SizedBox(height: 20),
+                  LoginButton(),
+                  SizedBox(height: 20),
+                ],
+              ),
             ),
           ),
         ),
@@ -106,40 +101,47 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      alignment: Alignment.bottomRight,
-      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-      child: ElevatedButton(
-        onPressed: () => Navigator.push(
-          context,
-          MaterialPageRoute<void>(
-            builder: (BuildContext context) => const HomePage(),
-          ),
-        ),
-        style: ElevatedButton.styleFrom(
-          primary: const Color.fromARGB(255, 39, 45, 99),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
-          padding: const EdgeInsets.all(0),
-        ),
-        child: Container(
-          alignment: Alignment.center,
-          height: 50.0,
-          width: size.width * 0.5,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(80.0),
-          ),
-          padding: const EdgeInsets.all(0),
-          child: const Text(
-            "LOGIN",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(
+          child: IconButton(
+            onPressed: () {},
+            iconSize: 60,
+            icon: const Icon(
+              Icons.fingerprint,
+              size: 60,
             ),
           ),
         ),
-      ),
+        Container(
+          alignment: Alignment.bottomRight,
+          margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+          child: ElevatedButton(
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                builder: (BuildContext context) => const HomePage(),
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+              primary: const Color.fromARGB(255, 39, 45, 99),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
+              padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+            ),
+            child: const Text(
+              "LOGIN",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

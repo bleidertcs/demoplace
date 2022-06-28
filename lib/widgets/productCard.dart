@@ -1,73 +1,99 @@
-import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/material.dart';
+
+import '../shopping_page.dart';
 
 class ProductCard extends StatelessWidget {
-  ProductCard({Key? key, this.image, this.productName, this.productPrice})
-      : super(key: key);
+  const ProductCard({
+    Key? key,
+    this.image,
+    this.productName,
+    this.productPrice,
+  }) : super(key: key);
 
-  String? image;
-  String? productName;
-  String? productPrice;
+  final String? image;
+  final String? productName;
+  final String? productPrice;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: const EdgeInsets.all(5.0),
-        height: 250,
-        width: 180,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(30),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
-            ),
-          ],
-        ),
-        child: Stack(children: [
-          const Positioned(
-              top: 15,
-              right: 10,
-              child: Icon(
-                FontAwesomeIcons.heart,
-                color: Color(0xff51b9cb),
-                size: 30,
-              )),
-          const Positioned(
-              bottom: 20,
-              right: 10,
-              child: Icon(
-                Icons.add_circle,
-                color: Color(0xff51b9cb),
-                size: 35,
-              )),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _productImage(),
-                _productName('name'),
-                _productPrice('price'),
-                _productStars()
-              ],
-            ),
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => const ShoppingPage(),
           ),
-        ]));
+        );
+      },
+      child: Container(
+          margin: const EdgeInsets.all(5.0),
+          height: 250,
+          width: 180,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Stack(children: [
+            const Positioned(
+                top: 15,
+                right: 10,
+                child: Icon(
+                  FontAwesomeIcons.heart,
+                  color: Color(0xff51b9cb),
+                  size: 30,
+                )),
+            const Positioned(
+                bottom: 20,
+                right: 10,
+                child: Icon(
+                  Icons.add_circle,
+                  color: Color(0xff51b9cb),
+                  size: 35,
+                )),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  ProductImage(),
+                  ProductName(),
+                  ProductPrice(),
+                  ProductStars()
+                ],
+              ),
+            ),
+          ])),
+    );
   }
+}
 
-  Widget _productImage() {
+class ProductImage extends StatelessWidget {
+  const ProductImage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return const Image(
       image: AssetImage('assets/botella.jpg'),
       height: 140,
     );
   }
+}
 
-  Widget _productPrice(String price) {
+class ProductPrice extends StatelessWidget {
+  const ProductPrice({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return const Text(
       'Bs. 100.00',
       style: TextStyle(
@@ -76,8 +102,13 @@ class ProductCard extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _productName(String name) {
+class ProductName extends StatelessWidget {
+  const ProductName({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return const Text(
       'Shoes',
       style: TextStyle(
@@ -87,8 +118,13 @@ class ProductCard extends StatelessWidget {
           color: Colors.black38),
     );
   }
+}
 
-  Widget _productStars() {
+class ProductStars extends StatelessWidget {
+  const ProductStars({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Row(
       children: const [
         Icon(

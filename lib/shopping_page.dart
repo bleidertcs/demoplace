@@ -37,17 +37,135 @@ class ShoppingPage extends StatelessWidget {
           const SizedBox(height: 10),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-              Text('Producto'),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  'Producto',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
               SizedBox(width: 10),
-              Text('Precio'),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  'Precio',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
               SizedBox(width: 10),
-              Text('Cantidad'),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  'Cantidad',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
               SizedBox(width: 10),
-              Text('Monto'),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  'Monto',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
             ],
-          )
+          ),
+          const SizedBox(height: 10),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Shampoo'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('2.50 Bs'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('1'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('2.50 Bs'),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('Jabon'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('2 Bs'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('5'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('10 Bs'),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('Desodorante'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('3.50 Bs'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('2'),
+              ),
+              SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text('7 Bs'),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
+          Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  'Pagar',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
