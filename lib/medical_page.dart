@@ -1,4 +1,4 @@
-import 'package:farmarketplace/widgets/productCard.dart';
+import 'package:farmarketplace/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class MedicalPage extends StatelessWidget {
@@ -18,7 +18,7 @@ class MedicalPage extends StatelessWidget {
       crossAxisCount: 2,
       mainAxisSpacing: 20,
       children: List.generate(10, (index) {
-        return ProductCard(
+        return const ProductCard(
           image: 'assets/botella.jpg',
           productName: 'Botella',
           productPrice: 'Bs. 10.000',

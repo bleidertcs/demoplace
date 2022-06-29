@@ -1,7 +1,6 @@
+import 'package:farmarketplace/product_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
-
-import '../shopping_page.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -22,7 +21,7 @@ class ProductCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => const ShoppingPage(),
+            builder: (BuildContext context) => const ProductView(),
           ),
         );
       },
@@ -60,9 +59,9 @@ class ProductCard extends StatelessWidget {
                   ProductImage(
                     image: image,
                   ),
-                  ProductName(),
-                  ProductPrice(),
-                  ProductStars()
+                  const ProductName(),
+                  const ProductPrice(),
+                  const ProductStars()
                 ],
               ),
             ),

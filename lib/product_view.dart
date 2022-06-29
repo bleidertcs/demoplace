@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'shopping_page.dart';
+
 class ProductView extends StatelessWidget {
   const ProductView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Detalle del Producto',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
       body: Stack(children: [
         Column(
           children: [
@@ -82,23 +90,34 @@ class ProductView extends StatelessWidget {
                             color: Colors.white,
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: const [
-                              Text(
-                                'Añadir al carrito',
-                                style: TextStyle(
-                                    color: Color(0xff51b9cb),
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    letterSpacing: 1.5),
-                              ),
-                              Icon(
-                                Icons.shopping_cart,
-                                size: 30,
-                                color: Color(0xff51b9cb),
-                              )
-                            ],
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const ShoppingPage(),
+                                ),
+                              );
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: const [
+                                Text(
+                                  'Añadir al carrito',
+                                  style: TextStyle(
+                                      color: Color(0xff51b9cb),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: 1.5),
+                                ),
+                                Icon(
+                                  Icons.shopping_cart,
+                                  size: 30,
+                                  color: Color(0xff51b9cb),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

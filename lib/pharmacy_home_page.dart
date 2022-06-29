@@ -1,9 +1,8 @@
-import 'package:farmarketplace/product-view.dart';
-import 'package:farmarketplace/widgets/productCard.dart';
+import 'package:farmarketplace/product_view.dart';
+import 'package:farmarketplace/shopping_page.dart';
+import 'package:farmarketplace/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'shopping_page.dart';
 
 class PharmacyPage extends StatelessWidget {
   const PharmacyPage({Key? key}) : super(key: key);
@@ -23,14 +22,7 @@ class PharmacyPage extends StatelessWidget {
               size: 30,
               color: Colors.white,
             ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (BuildContext context) => const ProductView(),
-                ),
-              );
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -215,9 +207,11 @@ class PharmacyPage extends StatelessWidget {
         heroTag: 'heroFloating',
         key: key,
         onPressed: () {
-          MaterialPageRoute(
-            builder: (BuildContext context) => const ProductView(),
-          );
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => const ShoppingPage(),
+              ));
         },
         child: const Icon(
           Icons.shopping_cart,
