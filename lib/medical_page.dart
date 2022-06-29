@@ -7,12 +7,29 @@ class MedicalPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Atencion Medica'),
+        title: const Text(
+          'Atencion Medica',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
-      body: Image.asset(
-        'assets/atencion_medica.png',
-        width: double.infinity,
-        height: double.infinity,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          const Text(
+            'Atencion Medica en Linea',
+            style: TextStyle(
+              fontSize: 30,
+              color: Color.fromARGB(255, 110, 198, 209),
+            ),
+          ),
+          Image.asset(
+            'assets/atencion_medica2.jpeg',
+            width: double.maxFinite,
+          ),
+        ],
       ),
     );
   }
