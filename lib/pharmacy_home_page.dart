@@ -133,31 +133,19 @@ class PharmacyPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              ProductCard(
-                image: 'assets/botella.jpg',
-                productName: '',
-                productPrice: '',
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/botella.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
               ),
-              ProductCard(
-                image: 'assets/pharmacy1.jpg',
-                productName: '',
-                productPrice: '',
-              ),
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              ProductCard(
-                image: 'assets/pharmacy2.jpg',
-                productName: '',
-                productPrice: '',
-              ),
-              ProductCard(
-                image: 'assets/pharmacy1.jpg',
-                productName: '',
-                productPrice: '',
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/pharmacy1.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
               ),
             ],
           ),
@@ -165,15 +153,19 @@ class PharmacyPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              ProductCard(
-                image: 'assets/botella.jpg',
-                productName: '',
-                productPrice: '',
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/pharmacy2.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
               ),
-              ProductCard(
-                image: 'assets/pharmacy2.jpg',
-                productName: '',
-                productPrice: '',
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/pharmacy1.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
               ),
             ],
           ),
@@ -181,15 +173,39 @@ class PharmacyPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              ProductCard(
-                image: 'assets/botella.jpg',
-                productName: '',
-                productPrice: '',
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/botella.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
               ),
-              ProductCard(
-                image: 'assets/botella.jpg',
-                productName: '',
-                productPrice: '',
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/pharmacy2.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
+              ),
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/botella.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
+              ),
+              Expanded(
+                child: ProductCard(
+                  image: 'assets/botella.jpg',
+                  productName: '',
+                  productPrice: '',
+                ),
               ),
             ],
           ),

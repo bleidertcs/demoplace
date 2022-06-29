@@ -14,31 +14,33 @@ class LoginPage extends StatelessWidget {
       body: Form(
         key: key,
         child: Background(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
-            child: Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  Icon(
-                    Icons.account_box,
-                    size: 100,
-                    color: Color(0xff66c7d3),
-                  ),
-                  SizedBox(height: 120),
-                  CustomInput(
-                    msgHint: 'Usuario',
-                    isObscure: false,
-                  ),
-                  SizedBox(height: 20),
-                  CustomInput(
-                    msgHint: 'Contraseña',
-                    isObscure: true,
-                  ),
-                  SizedBox(height: 20),
-                  LoginButton(),
-                  SizedBox(height: 20),
-                ],
+          child: Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 10),
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.account_box,
+                      size: 100,
+                      color: Color(0xff66c7d3),
+                    ),
+                    SizedBox(height: 120),
+                    CustomInput(
+                      msgHint: 'Usuario',
+                      isObscure: false,
+                    ),
+                    SizedBox(height: 20),
+                    CustomInput(
+                      msgHint: 'Contraseña',
+                      isObscure: true,
+                    ),
+                    SizedBox(height: 20),
+                    LoginButton(),
+                    SizedBox(height: 20),
+                  ],
+                ),
               ),
             ),
           ),

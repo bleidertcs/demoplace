@@ -11,18 +11,18 @@ class ProductView extends StatelessWidget {
         Column(
           children: [
             Image(
-              image: AssetImage('assets/botella.jpg'),
+              image: const AssetImage('assets/botella.jpg'),
               width: MediaQuery.of(context).size.width,
               height: 550,
             ),
           ],
         ),
-        Positioned(
+        const Positioned(
             top: 75,
             right: 20,
             child: Icon(
               FontAwesomeIcons.heart,
-              color: const Color(0xff51b9cb),
+              color: Color(0xff51b9cb),
               size: 40,
             )),
         Positioned(
@@ -48,50 +48,43 @@ class ProductView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     stars(),
-                    SizedBox(
-                      height: 20,
+                    const SizedBox(height: 20),
+                    const Expanded(
+                      child: Text('Botella',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 1.5)),
                     ),
-                    Text('Botella',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w800,
-                            letterSpacing: 1.5)),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
+                    const SizedBox(height: 20),
+                    const Text(
                         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                         )),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text('Bs. 10.000',
+                    const SizedBox(height: 20),
+                    const Text('Bs. 10.000',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w800,
                             letterSpacing: 1.5)),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    const SizedBox(height: 20),
                     Center(
                       child: InkWell(
                         child: Container(
                           height: 60,
                           width: MediaQuery.of(context).size.width - 50,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20)),
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+                            children: const [
                               Text(
                                 'Añadir al carrito',
                                 style: TextStyle(

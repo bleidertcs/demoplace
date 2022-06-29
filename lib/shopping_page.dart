@@ -8,15 +8,13 @@ class ShoppingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Su carrito',
+          'Su Carrito',
           style: TextStyle(
             color: Colors.white,
           ),
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: ListView(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -35,129 +33,142 @@ class ShoppingPage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  'Producto',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Text(
+                    'Producto',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: 40),
+                  Text(
+                    'Precio',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: 6),
+                  Text(
+                    'Cantidad',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(width: 6),
+                  Text(
+                    'Monto',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              SizedBox(width: 10),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  'Precio',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ),
-              SizedBox(width: 10),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  'Cantidad',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ),
-              SizedBox(width: 10),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  'Monto',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text('Shampoo'),
+                        SizedBox(height: 10),
+                        Text('Jabon'),
+                        SizedBox(height: 10),
+                        Text('Desodorante'),
+                        SizedBox(height: 10),
+                        Text('Atamel'),
+                        SizedBox(height: 10),
+                        Text(
+                          'Total :',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('4 Bs'),
+                        SizedBox(height: 10),
+                        Text('2 Bs'),
+                        SizedBox(height: 10),
+                        Text('5 bs'),
+                        SizedBox(height: 10),
+                        Text('7 Bs'),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('1'),
+                        SizedBox(height: 10),
+                        Text('3'),
+                        SizedBox(height: 10),
+                        Text('2'),
+                        SizedBox(height: 10),
+                        Text('1'),
+                        SizedBox(height: 10),
+                        Text(
+                          '7',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('4 Bs'),
+                        SizedBox(height: 10),
+                        Text('6 Bs'),
+                        SizedBox(height: 10),
+                        Text('10 Bs'),
+                        SizedBox(height: 10),
+                        Text('7 Bs'),
+                        SizedBox(height: 10),
+                        Text(
+                          '27 Bs',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
           const SizedBox(height: 10),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Shampoo'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('2.50 Bs'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('1'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('2.50 Bs'),
-              ),
-              SizedBox(height: 10),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('Jabon'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('2 Bs'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('5'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('10 Bs'),
-              ),
-              SizedBox(height: 10),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('Desodorante'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('3.50 Bs'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('2'),
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text('7 Bs'),
-              ),
-              SizedBox(height: 10),
-            ],
-          ),
           Column(
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'Pagar',
                   style: TextStyle(
                     color: Colors.white,
