@@ -1,6 +1,6 @@
-import 'package:farmarketplace/product_view.dart';
-import 'package:farmarketplace/shopping_page.dart';
-import 'package:farmarketplace/widgets/product_card.dart';
+import 'package:prototipo/product_view.dart';
+import 'package:prototipo/shopping_page.dart';
+import 'package:prototipo/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

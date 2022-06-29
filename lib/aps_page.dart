@@ -9,15 +9,7 @@ class ApsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('APS'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            color: Colors.blue,
-          ),
-        ],
-      ),
+      body: Image.asset('assets/aps.png'),
     );
   }
 }

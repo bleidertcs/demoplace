@@ -9,15 +9,7 @@ class LaboratoryPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Laboratorio'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            color: Colors.blue,
-          ),
-        ],
-      ),
+      body: Image.asset('assets/laboratorio.png'),
     );
   }
 }

@@ -1,8 +1,8 @@
-import 'package:farmarketplace/aps_page.dart';
-import 'package:farmarketplace/laboratory_page.dart';
-import 'package:farmarketplace/medical_page.dart';
-import 'package:farmarketplace/pharmacy_home_page.dart';
-import 'package:farmarketplace/qrcode_page.dart';
+import 'package:prototipo/aps_page.dart';
+import 'package:prototipo/laboratory_page.dart';
+import 'package:prototipo/medical_page.dart';
+import 'package:prototipo/pharmacy_home_page.dart';
+import 'package:prototipo/qrcode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

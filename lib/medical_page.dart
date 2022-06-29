@@ -1,4 +1,3 @@
-import 'package:farmarketplace/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class MedicalPage extends StatelessWidget {
@@ -7,12 +6,14 @@ class MedicalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Atencion Medica'),
-        ),
-        body: gridView(context));
+      appBar: AppBar(
+        title: const Text('Atencion Medica'),
+      ),
+      body: Image.asset('assets/atencion_medica.png'),
+    );
   }
 
+/*
   Widget gridView(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
@@ -26,4 +27,5 @@ class MedicalPage extends StatelessWidget {
       }),
     );
   }
+  */
 }

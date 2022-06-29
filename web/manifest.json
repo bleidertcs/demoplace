@@ -1,6 +1,6 @@
 {
-    "name": "farmarketplace",
-    "short_name": "farmarketplace",
+    "name": "prototipo",
+    "short_name": "prototipo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

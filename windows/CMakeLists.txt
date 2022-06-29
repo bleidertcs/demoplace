@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(farmarketplace LANGUAGES CXX)
+project(prototipo LANGUAGES CXX)
 
-set(BINARY_NAME "farmarketplace")
+set(BINARY_NAME "prototipo")
 
 cmake_policy(SET CMP0063 NEW)
 
