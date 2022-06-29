@@ -9,7 +9,11 @@ class MedicalPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Atencion Medica'),
       ),
-      body: Image.asset('assets/atencion_medica.png'),
+      body: Image.asset(
+        'assets/atencion_medica.png',
+        width: double.infinity,
+        height: double.infinity,
+      ),
     );
   }
 
